@@ -1,18 +1,15 @@
-Particle stars[];
-OddBall planet[];
+Particle stars[] = new Particle[1100];
 blackHole hole;
 blackHole2 hole2;
 void setup(){
   size(500,500);
-  stars = new Particle[1000];
-  planet = new OddBall[100];
   hole = new blackHole();
   hole2 = new blackHole2();
   for(int i = 0; i< stars.length; i++){
     stars[i] = new Particle();
   }
-  for(int i = 0; i<planet.length; i++){
-    planet[i] = new OddBall();
+  for(int i = 0; i<100; i++){
+    stars[i] = new OddBall();
   }
 }
 
@@ -97,9 +94,9 @@ void draw(){
       stars[i].show();
       stars[i].move();
     }
-    for(int i = 0; i<planet.length; i++){
-      planet[i].show();
-      planet[i].move();
+    for(int i = 0; i<100; i++){
+      stars[i].show();
+      stars[i].move();
     }
   }
 }
